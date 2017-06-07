@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  body{
+    background-color:skyblue;
+  }
+ /* div:hover{
+    transition-property:all;
+    transition-duration:6;
+    transition-timing-function;steps(100);
+    width: 700px;
+
+  }*/
+  .fish-box{
+    width: 172px;
+    height: 126px;
+    background: url(img/fish.png)no-repeat;
+    animation:swim 0.8s steps(8) infinite;
+  }
+  @keyframes swim{
+    from{
+
+    }
+    to{
+      background-position-y:-1008px;
+    }
+  }
+  .fish-box:hover{
+    animation-play-state:paused;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="fish-box"></div>
+</body>
+</html>
