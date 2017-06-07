@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>title</title>
+  <style>
+    ul {
+      list-style: none;
+      padding: 0;
+      width: 440px;
+      margin: 100px auto;
+      /*overflow: hidden;*/
+    }
+
+    li {
+      float: left;
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      background-color: yellowgreen;
+      transition: 2s;
+    }
+    /* 第一个 li标签 hover时 旋转 */
+
+    li:first-child:hover {
+      /* transform 可以设置旋转
+          deg是角度 
+       */
+      transform: rotate(360deg);
+    }
+    /* 第二个 li标签 hover时 变小为 原来的 1/2 */
+
+    li:nth-child(2):hover {
+      /* transform 可以设置旋转
+          scale 给的是 缩放的比例
+            第一个值是 x缩放
+            第二个值是 y缩放
+       */
+      /*transform: scale(0.5,0.5);*/
+      transform: scale(0.5, 2);
+    }
+    /* 第三个 li标签 hover时 往左边移动 100px 往上移动 200px */
+
+    li:nth-child(3):hover {
+      /* transform 可以设置旋转
+          translate 给的是 缩放的比例
+            第一个值是 x移动 →
+            第二个值是 y移动 ↓
+
+          定位 的作用 是将元素 固定在某个位置
+              一般是固定不变的
+          推荐 使用 transform 来改变元素的位置
+              使用transform来移动元素 性能会更好一些 平滑
+       */
+      transform: translate(-100px, -200px);
+    }
+    /* 最后一个 li标签 hover时 x 方向 扭曲
+        角度 就是 扭曲的 一个 程度
+     */
+
+    li:last-child:hover {
+      transform: skewX(45deg);
+      /*transform: skewX(90deg);*/
+      transition: .2s;
+      /* 下面这种写法 使用频率较低 */
+      /*transform: skew(45deg,45deg);*/
+    }
+  </style>
+</head>
+
+<body>
+
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+</body>
+
+</html>
